@@ -2,11 +2,16 @@
 
 Apply `Pocky & Rocky 2 (USA) TREX.ips` to **Pocky & Rocky 2 (USA)**, CRC32 `FC00BB1B` (1.5 MiB, no header). The patch grows the ROM to 2 MiB. Patched ROM CRC32: `70E6928A`.
 
+## At a glance
+
+- **High scores:** Both: a new top 10 table, saved to battery SRAM (the original has no score table), plus a battery save of game progress.
+- **Trainer:** INVINCIBILITY, INFINITE LIVES, KEEP POWER-UPS, FREEZE TIMER, START STAGE (1-9).
+
 ## Features
 
 - **Battery save**: the game saves at every stage clear (stage, score, lives, gold and keys). Choose PASSWORD on the title: the saved stage's password is already filled in, and START carries on with everything restored. (START on the title is always a new game, with the training. Dying before a stage is cleared doesn't make a save.)
 
-## High score table (added)
+## High scores: new top 10 table + saver
 
 The original has no score table at all. This patch adds a **top 10 table with initials, saved to battery SRAM**, made to look like part of the original game:
 
@@ -26,6 +31,8 @@ Missed (lag) frames, the same scripted input for 3000 frames in each of the nine
 | Stage 8 | 72 | 0 |
 
 ## Trainer options
+
+The trainer menu appears at power on. Up/Down picks an option, Left/Right/A/B changes it, START plays. High scores are only saved when every option is off and the game starts from the first stage or area.
 
 | Option | |
 |---|---|
