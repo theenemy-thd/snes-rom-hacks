@@ -2,7 +2,12 @@
 
 Apply `Axelay (USA) TREX.ips` to **Axelay (USA)**, CRC32 `F812B533` (1 MiB, no header). Patched ROM CRC32: `0820BB22`.
 
-## High score table (added)
+## At a glance
+
+- **High scores:** Both: a new top 10 table, saved to battery SRAM (the original keeps only one high score, lost at power off).
+- **Trainer:** INFINITE LIVES, INVULNERABLE, NEVER LOSE WEAPON, START STAGE (1-6).
+
+## High scores: new top 10 table + saver
 
 Axelay originally keeps a single high score that is lost at power off. This patch adds a **top 10 table with initials, saved to battery SRAM**, made to look like part of the original game:
 
@@ -28,6 +33,8 @@ Missed (lag) frames, the same scripted play for 8000 frames from the start of ea
 | 6 | 621 | 291 |
 
 ## Trainer options
+
+The trainer menu appears at power on. Up/Down picks an option, Left/Right/A/B changes it, START plays. High scores are only saved when every option is off and the game starts from the first stage or area.
 
 | Option | |
 |---|---|
