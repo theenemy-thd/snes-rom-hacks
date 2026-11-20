@@ -2,11 +2,16 @@
 
 Apply `R-Type III (USA) SA-1 TREX.ips` to **R-Type III: The Third Lightning (USA)**, CRC32 `642B656B` (2 MiB, no header). The patch grows the ROM to 4 MiB. Patched ROM CRC32: `6A5208C3`.
 
+## At a glance
+
+- **High scores:** Both: a new top 10 table, saved to battery RAM (the original has no saved table).
+- **Trainer:** INFINITE LIVES, INVULNERABLE, START STAGE (1-6).
+
 ## Features
 
 - **SA-1 conversion**: the game logic runs on the SA-1 chip at 10.74 MHz, which removes almost all of the original's slowdown. Needs an emulator, flash cart or FPGA core with SA-1 support.
 
-## High score table (added)
+## High scores: new top 10 table + saver
 
 The original has no saved high score table. This patch adds a **top 10 table with initials, saved to battery RAM**, made to look like part of the original game:
 
@@ -64,13 +69,15 @@ Each frame the SNES NMI asks the SA-1 to run the game logic and the sprite build
 
 ### 7. Testing
 
-The conversion was checked against the original in snes9x and an accuracy-focused bsnes built from source: the title, all 6 stages, both loops, the ending, the three attract demos, game over and continue, and every trainer option. The top 10 table and trainer were added on top of the finished conversion. It has also been played on MiSTer.
+The conversion was checked against the original in snes9x and an accuracy-focused bsnes built from source: the title, all 6 stages, both loops, the ending, the three attract demos, game over and continue, and every trainer option. It has also been played on MiSTer.
 
 ### MiSTer note
 
 The save is 256 KiB, because the game's work RAM now lives in the battery-backed BW-RAM and changes every frame. That can't be made smaller without dropping the saved table, and it means the MiSTer SNES core writes the whole 256 KiB save every time the OSD is opened, which takes a moment. To avoid that, turn the core's OSD autosave off and use "Save Backup RAM" after a new high score.
 
 ## Trainer options
+
+The trainer menu appears at power on. Up/Down picks an option, Left/Right/A/B changes it, START plays. High scores are only saved when every option is off and the game starts from the first stage or area.
 
 | Option | |
 |---|---|
