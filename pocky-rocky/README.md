@@ -2,7 +2,12 @@
 
 Apply `Pocky & Rocky (USA) TREX.ips` to **Pocky & Rocky (USA)**, CRC32 `2B0E7EA3` (1 MiB, no header). The patch grows the ROM to 2 MiB. Patched ROM CRC32: `F807C5AC`.
 
-## High score table (added)
+## At a glance
+
+- **High scores:** Both: a new top 10 table, saved to battery SRAM (the original has no score table).
+- **Trainer:** INFINITE LIVES, INFINITE HEALTH, INFINITE BOMBS, KEEP POWER-UPS, FREEZE TIMER, START STAGE (1-6).
+
+## High scores: new top 10 table + saver
 
 The original has no score table at all. This patch adds a **top 10 table with initials, saved to battery SRAM**, made to look like part of the original game:
 
@@ -24,6 +29,8 @@ Missed (lag) frames in the attract demos, about 4400 frames each:
 Scripted play, 10,000 frames per stage: 0 missed frames in stages 1-5 and 2 in stage 6 (7 before).
 
 ## Trainer options
+
+The trainer menu appears at power on. Up/Down picks an option, Left/Right/A/B changes it, START plays. High scores are only saved when every option is off and the game starts from the first stage or area.
 
 | Option | |
 |---|---|
