@@ -2,7 +2,12 @@
 
 Apply `Space Megaforce (USA) TREX.ips` to **Space Megaforce (USA)**, CRC32 `11202781` (1 MiB, no header). Patched ROM CRC32: `7DB79AFB`.
 
-## High score tables (added)
+## At a glance
+
+- **High scores:** Both: two new top 10 tables (standard and short game), saved to battery SRAM (the original keeps one record per mode, lost at power off).
+- **Trainer:** INFINITE LIVES, INFINITE BOMBS, INVULNERABLE, KEEP WEAPON POWER, START AREA (1-12).
+
+## High scores: two new top 10 tables + saver
 
 The original keeps one record each for the standard and the short game, lost at power off. This patch adds **two top 10 tables with initials, one per mode, saved to battery SRAM**, made to look like part of the original game:
 
@@ -18,6 +23,8 @@ The original keeps one record each for the standard and the short game, lost at 
 Missed (lag) frames, the same bot input for 8000 frames in each of the 12 areas: 0-9 per area, identical on the original and the patched game. The patch adds no lag.
 
 ## Trainer options
+
+The trainer menu appears at power on. Up/Down picks an option, Left/Right/A/B changes it, START plays. High scores are only saved when every option is off and the game starts from the first stage or area.
 
 | Option | |
 |---|---|
