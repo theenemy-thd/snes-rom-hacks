@@ -2,7 +2,12 @@
 
 Apply `Plok (USA) TREX.ips` to **Plok (USA)**, CRC32 `BBD678F6` (1 MiB, no header). The patch grows the ROM to 2 MiB. Patched ROM CRC32: `E5CBCF82`.
 
-## High score table (added)
+## At a glance
+
+- **High scores:** Both: a new top 10 table, saved to battery SRAM (the original keeps a score but has no table).
+- **Trainer:** INFINITE LIVES, INFINITE HEALTH, ENDLESS PRESENTS, START AREA (1-4).
+
+## High scores: new top 10 table + saver
 
 Plok keeps a score but has no table. This patch adds a **top 10 table with initials, saved to battery SRAM**, made to look like part of the original game:
 
@@ -26,6 +31,8 @@ Missed (lag) frames, scripted play for 12,000 frames per start area:
 Identical, so the patch adds no lag.
 
 ## Trainer options
+
+The trainer menu appears at power on. Up/Down picks an option, Left/Right/A/B changes it, START plays. High scores are only saved when every option is off and the game starts from the first stage or area.
 
 | Option | |
 |---|---|
