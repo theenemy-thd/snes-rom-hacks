@@ -7,6 +7,12 @@ Apply `Pocky & Rocky (USA) TREX.ips` to **Pocky & Rocky (USA)**, CRC32 `2B0E7EA3
 - **High scores:** Both: a new top 10 table, saved to battery SRAM (the original has no score table).
 - **Trainer:** INFINITE LIVES, INFINITE HEALTH, INFINITE BOMBS, KEEP POWER-UPS, FREEZE TIMER, START STAGE (1-6).
 
+## Screenshots
+
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="screenshots/title.png" width="256"> | <img src="screenshots/trainer.png" width="256"> | <img src="screenshots/hiscore.png" width="256"> |
+
 ## High scores: new top 10 table + saver
 
 The original has no score table at all. This patch adds a **top 10 table with initials, saved to battery SRAM**, made to look like part of the original game:
