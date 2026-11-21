@@ -7,6 +7,12 @@ Apply `Pocky & Rocky 2 (USA) TREX.ips` to **Pocky & Rocky 2 (USA)**, CRC32 `FC00
 - **High scores:** Both: a new top 10 table, saved to battery SRAM (the original has no score table), plus a battery save of game progress.
 - **Trainer:** INVINCIBILITY, INFINITE LIVES, KEEP POWER-UPS, FREEZE TIMER, START STAGE (1-9).
 
+## Screenshots
+
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="screenshots/title.png" width="256"> | <img src="screenshots/trainer.png" width="256"> | <img src="screenshots/hiscore.png" width="256"> |
+
 ## Features
 
 - **Battery save**: the game saves at every stage clear (stage, score, lives, gold and keys). Choose PASSWORD on the title: the saved stage's password is already filled in, and START carries on with everything restored. (START on the title is always a new game, with the training. Dying before a stage is cleared doesn't make a save.)
