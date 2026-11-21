@@ -18,6 +18,10 @@ IPS patches for SNES games that add battery-saved high scores and a trainer menu
 
 ### Axelay
 
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="axelay/screenshots/title.png" width="256"> | <img src="axelay/screenshots/trainer.png" width="256"> | <img src="axelay/screenshots/hiscore.png" width="256"> |
+
 - **High scores: both.** The original keeps a single high score that is lost at power off. It now has a top 10 table with initials, saved to battery SRAM, in Axelay's own font over a sprite starfield. The game's own record (57300) is the 1st place default, and the HUD's HI shows the table's top score.
 - **Trainer:**
   - INFINITE LIVES: lives never go down.
@@ -27,6 +31,10 @@ IPS patches for SNES games that add battery-saved high scores and a trainer menu
 
 ### R-Type III: The Third Lightning
 
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="rtype3-sa1/screenshots/title.png" width="256"> | <img src="rtype3-sa1/screenshots/trainer.png" width="256"> | <img src="rtype3-sa1/screenshots/hiscore.png" width="256"> |
+
 - **High scores: both.** The original has no saved table. It now has a top 10 table with initials, saved to battery RAM, in R-Type III's own lettering over a sprite starfield. Only player 1's score goes into the table in 2-player mode.
 - **Also:** the game logic runs on the SA-1 chip at 10.74 MHz, which removes almost all of the original's slowdown. Needs an emulator, flash cart or FPGA core with SA-1 support.
 - **Trainer:**
@@ -35,6 +43,10 @@ IPS patches for SNES games that add battery-saved high scores and a trainer menu
   - START STAGE: start on stage 1-6.
 
 ### Wild Guns
+
+| Title screen | Trainer menu | Ranking (now saved) |
+|:-:|:-:|:-:|
+| <img src="wild-guns/screenshots/title.png" width="256"> | <img src="wild-guns/screenshots/trainer.png" width="256"> | <img src="wild-guns/screenshots/hiscore.png" width="256"> |
 
 - **High scores: saver only.** Wild Guns already has its own top 5 RANKING with initials and character portraits, but the original loses it at power off. The patch keeps that ranking in battery SRAM, and leaves its look, initials entry and attract loop exactly as they were.
 - **Trainer:**
@@ -46,6 +58,10 @@ IPS patches for SNES games that add battery-saved high scores and a trainer menu
 
 ### Space Megaforce / Super Aleste
 
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="super-aleste/screenshots/title.png" width="256"> | <img src="super-aleste/screenshots/trainer.png" width="256"> | <img src="super-aleste/screenshots/hiscore.png" width="256"> |
+
 - **High scores: both.** The original keeps one record each for the standard and the short game, lost at power off. It now has two top 10 tables with initials, one per mode, saved to battery SRAM. The game's own records (1,500,000 standard, 300,000 short) are the 1st place defaults, and the title screen and HUD show each table's top score.
 - **Trainer:**
   - INFINITE LIVES: lives never go down.
@@ -55,6 +71,10 @@ IPS patches for SNES games that add battery-saved high scores and a trainer menu
   - START AREA: start on area 1-12.
 
 ### Pocky & Rocky
+
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="pocky-rocky/screenshots/title.png" width="256"> | <img src="pocky-rocky/screenshots/trainer.png" width="256"> | <img src="pocky-rocky/screenshots/hiscore.png" width="256"> |
 
 - **High scores: both.** The original has no score table at all. It now has a top 10 table with initials, saved to battery SRAM, in the game's own font over a dusk sky with falling cherry blossom. Both players enter initials at game over, each on their own joypad.
 - **Trainer:**
@@ -67,6 +87,10 @@ IPS patches for SNES games that add battery-saved high scores and a trainer menu
 
 ### Pocky & Rocky 2
 
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="pocky-rocky-2/screenshots/title.png" width="256"> | <img src="pocky-rocky-2/screenshots/trainer.png" width="256"> | <img src="pocky-rocky-2/screenshots/hiscore.png" width="256"> |
+
 - **High scores: both.** The original has no score table at all. It now has a top 10 table with initials, saved to battery SRAM, in the game's own password-screen style.
 - **Also:** a battery save of your progress at every stage clear (stage, score, lives, gold and keys). Choose PASSWORD on the title to carry on from it.
 - **Trainer:**
@@ -77,6 +101,10 @@ IPS patches for SNES games that add battery-saved high scores and a trainer menu
   - START STAGE: start on stage 1-9.
 
 ### Plok
+
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="plok/screenshots/title.png" width="256"> | <img src="plok/screenshots/trainer.png" width="256"> | <img src="plok/screenshots/hiscore.png" width="256"> |
 
 - **High scores: both.** Plok keeps a score but has no table. It now has a top 10 table with initials, saved to battery SRAM, in Plok's own font over the Cotton Island sea. The ending now returns to the title so the score can be entered, instead of looping forever.
 - **Trainer:**
