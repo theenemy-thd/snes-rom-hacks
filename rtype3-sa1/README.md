@@ -7,6 +7,12 @@ Apply `R-Type III (USA) SA-1 TREX.ips` to **R-Type III: The Third Lightning (USA
 - **High scores:** Both: a new top 10 table, saved to battery RAM (the original has no saved table).
 - **Trainer:** INFINITE LIVES, INVULNERABLE, START STAGE (1-6).
 
+## Screenshots
+
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="screenshots/title.png" width="256"> | <img src="screenshots/trainer.png" width="256"> | <img src="screenshots/hiscore.png" width="256"> |
+
 ## Features
 
 - **SA-1 conversion**: the game logic runs on the SA-1 chip at 10.74 MHz, which removes almost all of the original's slowdown. Needs an emulator, flash cart or FPGA core with SA-1 support.
