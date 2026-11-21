@@ -7,6 +7,12 @@ Apply `Plok (USA) TREX.ips` to **Plok (USA)**, CRC32 `BBD678F6` (1 MiB, no heade
 - **High scores:** Both: a new top 10 table, saved to battery SRAM (the original keeps a score but has no table).
 - **Trainer:** INFINITE LIVES, INFINITE HEALTH, ENDLESS PRESENTS, START AREA (1-4).
 
+## Screenshots
+
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="screenshots/title.png" width="256"> | <img src="screenshots/trainer.png" width="256"> | <img src="screenshots/hiscore.png" width="256"> |
+
 ## High scores: new top 10 table + saver
 
 Plok keeps a score but has no table. This patch adds a **top 10 table with initials, saved to battery SRAM**, made to look like part of the original game:
