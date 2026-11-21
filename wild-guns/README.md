@@ -7,6 +7,12 @@ Apply `Wild Guns (USA) TREX.ips` to **Wild Guns (USA)**, CRC32 `085D8D14` (1 MiB
 - **High scores:** Saver only: the game's own top 5 RANKING is kept in battery SRAM instead of being lost at power off. No new table.
 - **Trainer:** INFINITE LIVES, INVULNERABLE, INFINITE BOMBS, INFINITE GUN AMMO, STAGE SELECT.
 
+## Screenshots
+
+| Title screen | Trainer menu | Ranking (now saved) |
+|:-:|:-:|:-:|
+| <img src="screenshots/title.png" width="256"> | <img src="screenshots/trainer.png" width="256"> | <img src="screenshots/hiscore.png" width="256"> |
+
 ## High scores: saver only (the game's own ranking)
 
 Wild Guns already has its own **top 5 RANKING** (scores, initials and character portraits), but the original loses it at power off. This patch **keeps the game's own ranking in battery SRAM**, so it survives a power cycle. The game's font, screen, initials entry and attract loop are left exactly as they were; it shows a little longer when there's nothing to enter (6 s) and any button leaves early.
