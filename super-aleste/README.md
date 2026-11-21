@@ -7,6 +7,12 @@ Apply `Space Megaforce (USA) TREX.ips` to **Space Megaforce (USA)**, CRC32 `1120
 - **High scores:** Both: two new top 10 tables (standard and short game), saved to battery SRAM (the original keeps one record per mode, lost at power off).
 - **Trainer:** INFINITE LIVES, INFINITE BOMBS, INVULNERABLE, KEEP WEAPON POWER, START AREA (1-12).
 
+## Screenshots
+
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="screenshots/title.png" width="256"> | <img src="screenshots/trainer.png" width="256"> | <img src="screenshots/hiscore.png" width="256"> |
+
 ## High scores: two new top 10 tables + saver
 
 The original keeps one record each for the standard and the short game, lost at power off. This patch adds **two top 10 tables with initials, one per mode, saved to battery SRAM**, made to look like part of the original game:
