@@ -7,6 +7,12 @@ Apply `Axelay (USA) TREX.ips` to **Axelay (USA)**, CRC32 `F812B533` (1 MiB, no h
 - **High scores:** Both: a new top 10 table, saved to battery SRAM (the original keeps only one high score, lost at power off).
 - **Trainer:** INFINITE LIVES, INVULNERABLE, NEVER LOSE WEAPON, START STAGE (1-6).
 
+## Screenshots
+
+| Title screen | Trainer menu | High score table |
+|:-:|:-:|:-:|
+| <img src="screenshots/title.png" width="256"> | <img src="screenshots/trainer.png" width="256"> | <img src="screenshots/hiscore.png" width="256"> |
+
 ## High scores: new top 10 table + saver
 
 Axelay originally keeps a single high score that is lost at power off. This patch adds a **top 10 table with initials, saved to battery SRAM**, made to look like part of the original game:
