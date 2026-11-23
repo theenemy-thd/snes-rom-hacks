@@ -1,6 +1,6 @@
 # R-Type III (USA) SA-1 TREX
 
-Apply `R-Type III (USA) SA-1 TREX.ips` to **R-Type III: The Third Lightning (USA)**, CRC32 `642B656B` (2 MiB, no header). The patch grows the ROM to 4 MiB. Patched ROM CRC32: `6A5208C3`.
+Apply `R-Type III (USA) SA-1 TREX.ips` to **R-Type III: The Third Lightning (USA)**, CRC32 `642B656B` (2 MiB, no header). The patch grows the ROM to 4 MiB. Patched ROM CRC32: `24DD5C2F`.
 
 ## At a glance
 
@@ -17,13 +17,14 @@ Apply `R-Type III (USA) SA-1 TREX.ips` to **R-Type III: The Third Lightning (USA
 
 - **SA-1 conversion**: the game logic runs on the SA-1 chip at 10.74 MHz, which removes almost all of the original's slowdown. Needs an emulator, flash cart or FPGA core with SA-1 support.
 
-## High scores: new top 10 table + saver
+## High score table (added)
 
 The original has no saved high score table. This patch adds a **top 10 table with initials, saved to battery RAM**, made to look like part of the original game:
 
 - R-Type III's own lettering, taken from the game.
 - A sprite starfield behind it, to suit the shoot 'em up.
 - Initials entry after the continue screen (YES or NO) for a top 10 score; the table also shows every other time the title is left idle, before the demo.
+- A game over with 0 points shows the table without an entry.
 
 ## FastROM and missed frames
 
@@ -71,11 +72,15 @@ Each frame the SNES NMI asks the SA-1 to run the game logic and the sprite build
 - **Charged shot:** a scanline wait before an optional DMA lost whole frames (a black flash) when the NMI ran late. The NMI keeps forced blank until the line 6 IRQ, so the wait could be removed.
 - **HUD split:** the raster IRQs at lines 207 and 215 use delay loops to land their writes in h-blank. The SA-1 build's IRQ entry costs about 140 master cycles more, so the loops were shortened from 5 to 3 passes. The writes now land within 1-2 pixels of the original's.
 - **Ending and second loop:** the logic waits for the SNES main loop in 8 places, which could deadlock under SA-1. The SA-1 now hands that wait back to the SNES.
+- **OPTION screen:** one instruction in the OPTION screen's code runs at two different widths. The converted copy used only one of them, which left the screen black. It now works for both.
+- **Game over sound command:** a sound command the logic sends at game over was lost on the SA-1. The SNES now sends it.
+- **Stage start sprites:** at a stage start the converted game could send the sprite table to the PPU right after a frame that stayed blank, when the PPU skips its usual address reset, so garbled sprites flashed behind the ship for one frame. The address is now set before each upload.
+- **Continue screen:** the continue screen's set-up relied on the screen being blanked when it loads its graphics. The SA-1 version could get there a few lines early, with the display still on, so the graphics were lost and the screen came up garbled. It now blanks the screen right after turning interrupts off, so nothing can switch the display back on in between.
 - **Attract demos:** the demo stage set-ups start VRAM DMAs straight from the logic; those four DMA blocks are run on the SNES.
 
 ### 7. Testing
 
-The conversion was checked against the original in snes9x and an accuracy-focused bsnes built from source: the title, all 6 stages, both loops, the ending, the three attract demos, game over and continue, and every trainer option. It has also been played on MiSTer.
+The conversion was checked against the original in snes9x and an accuracy-focused bsnes built from source: the title, all 6 stages, both loops, the ending, the three attract demos, the OPTION screen, game over and continue, and every trainer option. The top 10 table and trainer were added on top of the finished conversion. It has also been played on MiSTer.
 
 ### MiSTer note
 
